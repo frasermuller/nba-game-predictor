@@ -1,0 +1,1278 @@
+/* Enhanced CSS with modern design and animations */
+
+/* Consistent Page Headers */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+  position: relative;
+}
+
+.page-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--nba-blue), var(--nba-red));
+  border-radius: 2px;
+}
+
+.page-header h1 {
+  color: var(--nba-blue);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(23, 64, 139, 0.1);
+}
+
+/* Consistent page containers */
+.predictions-page,
+.about-page,
+.teams-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem 2rem;
+  min-height: calc(100vh - 80px);
+}
+
+/* About page specific styling */
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-content section {
+  background: white;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(23, 64, 139, 0.08);
+  border: 1px solid rgba(23, 64, 139, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-content section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(23, 64, 139, 0.15);
+}
+
+.about-content h2 {
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.about-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--nba-blue), var(--nba-red));
+  border-radius: 2px;
+}
+
+.about-content h3 {
+  color: var(--nba-blue);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+.about-content ul {
+  margin-left: 2rem;
+  margin-top: 1rem;
+  list-style: none; /* Remove default bullet points */
+}
+
+.about-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.about-content li::before {
+  content: '▶';
+  color: var(--nba-red);
+  position: absolute;
+  left: -1.5rem;
+  font-size: 0.8rem;
+}
+
+.about-content ol {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.about-content ol li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.about-content ol li::before {
+  display: none;
+}
+
+.about-content p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Enhanced Home Page Styles */
+:root {
+  --nba-blue: #17408B;
+  --nba-white: #FFFFFF;
+  --nba-red: #C9082A;
+  --navbar-bg: var(--nba-blue);
+  --navbar-link: var(--nba-white);
+  --navbar-link-hover: var(--nba-red);
+  --navbar-link-active-bg: var(--nba-white);
+  --navbar-link-active: var(--nba-blue);
+  --gradient-primary: linear-gradient(135deg, var(--nba-blue) 0%, #1e3a8a 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--nba-red) 0%, #dc2626 100%);
+}
+
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  padding-bottom: 2rem; /* Add bottom padding to the home container */
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem; /* Reduced from 6rem to 3rem */
+  padding: 4rem 0 6rem 0;
+  /* Removed background shadow */
+  border-radius: 24px;
+  margin-top: 2rem;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gradient-secondary);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(201, 8, 42, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.trophy-icon {
+  color: #ffd700;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  letter-spacing: 2px;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  line-height: 1.1;
+  text-shadow: 0 4px 8px rgba(23, 64, 139, 0.2);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  color: #64748b;
+  font-weight: 500;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(23, 64, 139, 0.1);
+  min-width: 120px;
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--nba-blue);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--gradient-secondary);
+  color: var(--nba-white);
+  padding: 1.2rem 3rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 32px rgba(201, 8, 42, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(201, 8, 42, 0.4);
+}
+
+.button-icon {
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .button-icon {
+  transform: translateX(3px);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Force exactly 3 columns */
+  gap: 2rem; /* Reduce gap slightly */
+  margin-top: 2rem; /* Reduced from 4rem to 2rem */
+  margin-bottom: 4rem; /* Add bottom margin for spacing */
+  padding: 0 1rem;
+  max-width: 1200px; /* Ensure container has max width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(23, 64, 139, 0.08);
+  padding: 2.5rem 1.5rem; /* Reduce horizontal padding */
+  text-align: center;
+  position: relative;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(23, 64, 139, 0.05);
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(23, 64, 139, 0.15);
+}
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; /* Back to original 80px */
+  height: 80px; /* Back to original 80px */
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.feature-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--nba-blue);
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.feature-highlight {
+  display: inline-block;
+  background: var(--gradient-secondary);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Enhanced Navigation */
+.navbar {
+  width: 100%;
+  background: var(--gradient-primary);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(23, 64, 139, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  color: var(--navbar-link);
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.3s ease;
+}
+
+.nav-link:hover::before {
+  left: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: var(--navbar-link-active-bg);
+  color: var(--navbar-link-active);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Enhanced Teams Page */
+.teams-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.teams-page h1 {
+  text-align: center;
+  color: var(--nba-blue);
+  margin-bottom: 1rem; /* Reduced from 2rem to make space for subtitle */
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.teams-page-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Fixed teams grid - 5 boxes per row on fullscreen */
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .teams-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .teams-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .teams-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* Team card base styling - even more compact */
+.team-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(23, 64, 139, 0.12);
+  padding: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  min-height: 180px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  transform-origin: center center;
+  border: 2px solid transparent;
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  border-radius: inherit;
+  filter: brightness(1.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover::before {
+  opacity: 1;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  min-height: 300px;
+}
+
+.team-card .team-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  color: white !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+  line-height: 1.1;
+  z-index: 2;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0 0.5rem;
+}
+
+.team-stats {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  padding: 1rem;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 0.8rem;
+  opacity: 0;
+  transition: opacity 0.4s ease 0.1s;
+  color: white;
+  font-size: 0.75rem;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.team-card:hover .team-stats {
+  opacity: 1;
+}
+
+.team-card:hover .team-name {
+  opacity: 0;
+}
+
+.stat-label {
+  font-weight: 500;
+  color: #cbd5e1;
+  font-size: 0.65rem;
+  line-height: 1.2;
+}
+
+.stat-value {
+  font-weight: bold;
+  color: #FFD700;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.stats-header {
+  grid-column: 1 / -1;
+  color: #FFD700;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 0.4rem;
+}
+
+/* Simple Predictions Page - Back to Original Clean Style */
+.predictions-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.prediction-selector {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.selector-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.selector-header h2 {
+  color: var(--nba-blue);
+  margin-bottom: 0.5rem;
+}
+
+.selector-header p {
+  color: #666;
+}
+
+.team-selection {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.team-select-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.team-select-container label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--nba-blue);
+}
+
+.team-select {
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.team-select:focus {
+  outline: none;
+  border-color: var(--nba-blue);
+}
+
+.vs-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--nba-blue);
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.predict-button {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background: var(--nba-red);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.predict-button:hover:not(.disabled) {
+  background: #a00;
+}
+
+.predict-button.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.loading-spinner.small {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+  margin-right: 0.5rem;
+}
+
+.error-message {
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.prediction-results {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.prediction-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.prediction-header h2 {
+  color: var(--nba-blue);
+  margin-bottom: 1rem;
+}
+
+.matchup-display {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #666;
+}
+
+.vs {
+  color: var(--nba-red);
+  margin: 0 1rem;
+}
+
+.winner-announcement {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.winner-card {
+  background: var(--nba-blue);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.winner-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.winner-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.prediction-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.detail-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.detail-card h4 {
+  color: var(--nba-blue);
+  margin-bottom: 1rem;
+}
+
+.score-prediction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.team-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.team-name {
+  font-size: 1rem;
+  color: #666;
+}
+
+.score {
+  font-size: 2rem;
+  color: var(--nba-blue);
+}
+
+.score-divider {
+  font-size: 2rem;
+  color: #ccc;
+}
+
+.probability-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.probability-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.prob-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: var(--nba-blue);
+}
+
+.probability-bar {
+  height: 20px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.probability-fill {
+  height: 100%;
+  background: var(--nba-blue);
+  border-radius: 10px;
+  transition: width 1s ease;
+}
+
+.prediction-explanation {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.prediction-explanation h3 {
+  color: var(--nba-blue);
+  margin-bottom: 1rem;
+}
+
+.explanation-content p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.methodology-section,
+.score-explanation,
+.disclaimer-section {
+  margin: 2rem 0;
+}
+
+.methodology-section h4,
+.score-explanation h4,
+.disclaimer-section h4 {
+  color: var(--nba-red);
+  margin-bottom: 1rem;
+}
+
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.method-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.method-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.method-content h5 {
+  color: var(--nba-blue);
+  margin-bottom: 0.5rem;
+}
+
+.method-content p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.score-explanation ul,
+.disclaimer-content ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.score-explanation li,
+.disclaimer-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.disclaimer-content {
+  background: #fff3cd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}
+
+.new-prediction-button {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background: var(--nba-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.new-prediction-button:hover {
+  background: #0f3470;
+}
+
+/* Enhanced Stats Guide */
+.stats-guide {
+  max-width: 1400px;
+  margin: 4rem auto 2rem auto;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(23, 64, 139, 0.08);
+  border: 1px solid rgba(23, 64, 139, 0.05);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat-explanation {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  border-left: 4px solid var(--nba-blue);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-explanation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(23, 64, 139, 0.02) 0%, rgba(201, 8, 42, 0.02) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stat-explanation:hover::before {
+  opacity: 1;
+}
+
+.stat-explanation:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(23, 64, 139, 0.15);
+  border-left-color: var(--nba-red);
+}
+
+.stat-explanation:last-child {
+  grid-column: 1 / -1;
+  background: var(--gradient-primary);
+  color: white;
+  border-left: 4px solid var(--nba-red);
+}
+
+/* Upcoming Games Section */
+.upcoming-games-section {
+  margin-top: 4rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
+}
+
+.upcoming-games-section .page-header h2 {
+  color: var(--nba-blue);
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.feature-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.feature-preview-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 32px rgba(23, 64, 139, 0.08);
+  border: 2px dashed rgba(23, 64, 139, 0.2);
+  transition: all 0.3s ease;
+}
+
+.feature-preview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(23, 64, 139, 0.15);
+}
+
+.preview-badge {
+  display: inline-block;
+  background: var(--gradient-secondary);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.feature-description {
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.upcoming-games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.upcoming-game-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(23, 64, 139, 0.08);
+  padding: 2rem;
+  border: 1px solid rgba(23, 64, 139, 0.05);
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  position: relative;
+  overflow: hidden;
+}
+
+.upcoming-game-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.upcoming-game-card:hover::before {
+  transform: scaleX(1);
+}
+
+.upcoming-game-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(23, 64, 139, 0.15);
+  opacity: 1;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(23, 64, 139, 0.1);
+}
+
+.game-date {
+  font-weight: bold;
+  color: var(--nba-blue);
+  font-size: 1rem;
+}
+
+.game-time {
+  color: #64748b;
+  font-size: 0.9rem;
+  background: #f8fafc;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.game-matchup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.team-box {
+  flex: 1;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(23, 64, 139, 0.05);
+  transition: all 0.3s ease;
+}
+
+.team-box:hover {
+  background: linear-gradient(135deg, var(--nba-blue) 0%, #1e3a8a 100%);
+  color: white;
+  transform: scale(1.05);
+}
+
+.team-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--nba-blue);
+  transition: color 0.3s ease;
+}
+
+.team-box:hover .team-name {
+  color: white;
+}
+
+.vs-divider {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.75rem;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.8rem;
+  min-width: 50px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(23, 64, 139, 0.3);
+}
+
+.prediction-status {
+  text-align: center;
+}
+
+.status-text {
+  display: inline-block;
+  background: var(--gradient-secondary);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(201, 8, 42, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-stats {
+    gap: 1.5rem;
+  }
+  
+  .stat-item {
+    min-width: 100px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .features {
+    grid-template-columns: 1fr; /* Stack on mobile only */
+    gap: 2rem;
+  }
+  
+  .feature-card {
+    padding: 3rem 2rem; /* Full padding on mobile */
+  }
+  
+  .upcoming-games-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .game-matchup {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .team-box {
+    width: 100%;
+  }
+  
+  .vs-divider {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1rem 3rem 1rem;
+    margin-top: 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Make Predictions page team names blue without shadow */
+.team-score .team-name {
+  font-size: 1rem;
+  color: var(--nba-blue) !important;
+  text-shadow: none !important;
+}
