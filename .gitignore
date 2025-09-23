@@ -42,6 +42,3 @@ Thumbs.db
 
 # Logs
 *.log
-
-# Model files (optional - you might want to include the trained model)
-# backend/models/*.pkl
