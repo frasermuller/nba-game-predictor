@@ -40,14 +40,14 @@ A full-stack web application that predicts NBA game outcomes using machine learn
 ```bash
 cd backend
 
-# Create virtual environment
-python -m venv .venv
+# Create virtual environment (use python3 on macOS/Linux)
+python3 -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Train the model (first time only)
+# Train the model (first time only - optional, model already included)
 python scripts/train_model.py
 
 # Start the API server
@@ -134,7 +134,24 @@ To add new features:
 - **Data**: 8910 NBA games across 7 seasons
 - **Response Time**: <100ms per prediction
 
-## 📄 License
+## � Troubleshooting
+
+### Common Issues
+
+**Backend won't start:**
+- Make sure you're using `python3` instead of `python` on macOS/Linux
+- Ensure virtual environment is activated: `source .venv/bin/activate`
+- If port 3001 is busy: `lsof -ti:3001 | xargs kill -9`
+
+**Frontend styling missing:**
+- Make sure you ran `npm install` in the frontend directory
+- Try clearing browser cache or hard refresh (Cmd+Shift+R / Ctrl+Shift+R)
+
+**Module not found errors:**
+- Activate virtual environment: `source .venv/bin/activate` 
+- Reinstall dependencies: `pip install -r requirements.txt`
+
+## �📄 License
 
 This project is licensed under the MIT License.
 
