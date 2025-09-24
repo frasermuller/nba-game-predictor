@@ -1,8 +1,8 @@
-# 🏀 NBA Game Predictor
+# NBA Game Predictor
 
 A full-stack web application that predicts NBA game outcomes using machine learning based on historical game data and team statistics.
 
-## ✨ Features
+## Features
 
 - **Real-time Predictions**: Predict NBA game winners with win probabilities
 - **Team Statistics**: View comprehensive team stats and performance metrics
@@ -10,7 +10,7 @@ A full-stack web application that predicts NBA game outcomes using machine learn
 - **Clean Interface**: Modern React frontend with team colors and responsive design
 - **Advanced ML**: Logistic regression model with 22 carefully selected features
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Frontend:**
 - React 18 + Vite
@@ -28,7 +28,7 @@ A full-stack web application that predicts NBA game outcomes using machine learn
 - 22 features including team stats, opponent stats, and rolling averages
 - MinMax scaling for optimal performance
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.8+
@@ -70,7 +70,7 @@ npm run dev
 
 The frontend will run on `http://localhost:5174`
 
-## 📊 How It Works
+## How It Works
 
 1. **Data Processing**: Uses real NBA game data with rolling 10-game averages
 2. **Feature Extraction**: Extracts 22 key features including:
@@ -81,7 +81,7 @@ The frontend will run on `http://localhost:5174`
 3. **Machine Learning**: Logistic regression model trained on historical matchups
 4. **Prediction**: Outputs win probabilities and predicted scores
 
-## 🎯 Model Features
+## Model Features
 
 The model uses these key feature categories:
 - **Shooting Stats**: FGA, FG%, EFG%
@@ -90,7 +90,7 @@ The model uses these key feature categories:
 - **Player Impact**: Max player statistics
 - **Home Advantage**: Home court factor
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 nba-game-predictor/
@@ -113,7 +113,7 @@ nba-game-predictor/
 └── README.md
 ```
 
-## 🔄 Development
+## Development
 
 To retrain the model with new data:
 
@@ -127,21 +127,20 @@ To add new features:
 2. Retrain the model
 3. Update the frontend if needed
 
-## 📈 Performance
+## Performance
 
 - **Training Accuracy**: ~60-65% (realistic for NBA predictions)
 - **Features**: 22 carefully selected features
 - **Data**: 8910 NBA games across 7 seasons
 - **Response Time**: <100ms per prediction
 
-## � Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
 **Backend won't start:**
 - Make sure you're using `python3` instead of `python` on macOS/Linux
 - Ensure virtual environment is activated: `source .venv/bin/activate`
-- If port 3001 is busy: `lsof -ti:3001 | xargs kill -9`
 
 **Frontend styling missing:**
 - Make sure you ran `npm install` in the frontend directory
@@ -151,11 +150,11 @@ To add new features:
 - Activate virtual environment: `source .venv/bin/activate` 
 - Reinstall dependencies: `pip install -r requirements.txt`
 
-## �📄 License
+## License
 
 This project is licensed under the MIT License.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - NBA data sourced from basketball-reference.com
 - Built with React and Flask
