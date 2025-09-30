@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 function UpcomingGames() {
-  // Mock data to demonstrate future feature
+  // Mock data 
   const mockUpcomingGames = [
     { id: 1, team1: 'Lakers', team2: 'Warriors', date: '2025-02-15', time: '7:30 PM' },
     { id: 2, team1: 'Celtics', team2: 'Heat', date: '2025-02-16', time: '8:00 PM' },
